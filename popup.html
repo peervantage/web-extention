@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+<!--    <link rel="stylesheet" href="choose_beast.css"/>-->
+    <script src="axios.min.js"></script>
+
+    <style>
+
+ 
+      #popup-content{
+        text-align: center;
+      width: 16rem;
+      font-size: 14px;
+      }
+
+      #datas{
+        margin-top: 8px;
+        bottom: 1px solid red;
+        margin: .8rem;
+        background: rgba(87, 217, 250, 0.623);
+      }
+
+      #email__id, #password__id{
+        display: block;
+        border-radius: 0px;
+        border: none;
+        border-bottom: 1px solid rgba(42, 47, 48, 0.623);
+        width: 90%;
+        height: 2rem;
+
+        margin: auto;
+      }
+
+      .left{
+        float: left;
+        display: inline-block;
+        margin-right: 10px;
+
+      }
+
+      .right{
+        float: right;
+        display: inline;
+      }
+
+      #submit{
+        border: 1px solid #3552f7;
+        margin-top: 1.3rem;
+        padding:0.4rem 1rem;
+        color: #3552f7;
+      }
+
+      #submit:focus{
+        outline: none;
+      }
+
+      #submit:hover{
+        background-color: rgb(95, 114, 226);
+        color: white;
+      }
+
+      i {
+  border: solid green;;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  font-size: 18px;
+}
+
+i:hover{
+  border: solid red;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  font-size: 18px;
+}
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  color: green;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  
+}
+
+.number-up, .number-down{
+  padding-right: 4px;
+}
+p{
+  word-spacing: .41rem;
+}
+
+.text{
+  color:red;
+  font-size: 16px;
+}
+
+input:focus{
+  outline: none;
+}
+
+input::placeholder{
+  font-size: 14px;
+  background: none;
+}
+
+    </style>
+
+
+  </head>
+
+<body>
+
+  <div id="popup-content">
+    <p class="text">Factoid Extension</p>
+    <div id="form__id">
+       <input name="email" type="text" id="email__id" placeholder="Email">
+      <input name="password"  type="password" id="password__id" placeholder="Password">
+      <button  id="submit"  style = "margin-bottom: .3rem;">Log in</button>
+    </div>
+    <div id="response" hidden>
+      You are logged in
+    </div>
+
+    <div id="datas" style="border-top: 1px solid rgba(85, 85, 85, 0.61);">
+      <p class="left"><span class="number-up">N/A</span> vote <i class="up "></i></p>
+      <p class="right"><span class="number-down">N/A</span> vote <i class="down "></i></p>
+    </div>
+  </div>
+<script src="load.js"></script>
+
+</body>
+
+</html>

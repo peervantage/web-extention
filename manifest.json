@@ -1,0 +1,41 @@
+{
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "img/icon_16.png",
+      "32": "img/icon_32.png"
+    },
+    "default_popup": "popup.html",
+    "default_title": "Factoid"
+  },
+  "content_scripts": [
+    {
+
+      "js": [
+        "content-script.js"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ]
+    }
+
+  ],
+  "description": "__MSG_extShortDesc__",
+  "manifest_version": 2,
+  "name": "uBlock Origin",
+  "permissions": [
+    "contextMenus",
+    "privacy",
+    "storage",
+    "tabs",
+    "unlimitedStorage",
+    "webNavigation",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
+  "version": "1.21.2"
+}
